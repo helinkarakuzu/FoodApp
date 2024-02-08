@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.helin.foodapp.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/main_buyFragment"
+            app:destination="@id/buyFragment" />
+        <action
+            android:id="@+id/mainDetailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.helin.foodapp.ui.BuyFragment"
+        android:label="fragment_buy"
+        tools:layout="@layout/fragment_buy" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.helin.foodapp.ui.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="food"
+            app:argType="com.helin.foodapp.model.data.Food" />
+        <action
+            android:id="@+id/detailBuyFragment"
+            app:destination="@id/buyFragment" />
+    </fragment>
+</navigation>
