@@ -1,4 +1,4 @@
-Used technologies: 
+## Used technologies: 
 
 # MVVM
 # Retrofit
